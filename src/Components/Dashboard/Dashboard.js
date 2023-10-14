@@ -30,22 +30,32 @@ const Dashboard = ({ currentUser }) => {
   }, []);
 
   const updatingUser = async (id, status) => {
-    if (status !== "delete") {
+    if (status === "Active") {
       await axios.put(
         `https://task4-beckend.onrender.com/api/v1/users/updateUser/${id}`,
         {
           status: status,
         }
       );
+    } else if (status === "Blocked") {
+      await axios.put(
+        `https://task4-beckend.onrender.com/api/v1/users/updateUser/${id}`,
+        {
+          status: status,
+        }
+      );
+      if (checkedUsers.includes(currentUser._id)) {
+        logout();
+      }
     } else {
       await axios.delete(
         `https://task4-beckend.onrender.com/api/v1/users/deleteUser/${id}`
       );
+      if (checkedUsers.includes(currentUser._id)) {
+        logout();
+      }
     }
 
-    if (checkedUsers.includes(currentUser._id)) {
-      logout();
-    }
     getAllUsers();
     setCheckedUsers([]);
   };
