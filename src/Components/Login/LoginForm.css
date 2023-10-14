@@ -1,0 +1,21 @@
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 30vw;
+  height: 100vh;
+  padding-top: 5vh;
+}
+
+.login-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+
+.login-btn {
+  width: 100% !important;
+}

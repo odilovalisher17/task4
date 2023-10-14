@@ -1,0 +1,35 @@
+.dash-header {
+  align-items: center;
+  padding: 1rem 0;
+  background-color: rgb(247, 247, 247);
+}
+
+.dash-header > div {
+  margin: 0 1rem;
+}
+
+.functional-btns {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.functional-btns button {
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.functional-btns button:first-child svg {
+  padding-right: 10px;
+}
+
+.functional-btns button svg {
+  fill: #fff;
+}
+
+.table-div {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
