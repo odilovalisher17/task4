@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./Components/Helpers/PrivateRoute";
-import { AuthProvider, useAuth } from "./Components/Helpers/AuthContext";
+import { AuthProvider } from "./Components/Helpers/AuthContext";
 import LoginForm from "./Components/Login/LoginForm";
 import RegistrationForm from "./Components/Register/RegistrationForm";
 import Dashboard from "./Components/Dashboard/Dashboard";
@@ -23,11 +23,13 @@ const App = () => {
     }
   };
 
+  /* eslint-disable */
   useEffect(() => {
     if (authToken) {
       getUser();
     }
   }, []);
+  /* eslint-disable */
 
   return (
     <AuthProvider>
